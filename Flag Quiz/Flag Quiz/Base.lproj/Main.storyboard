@@ -8,7 +8,7 @@
         <!--Flag Quiz-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Flag_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="QuizViewController" customModule="Flag_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="195" y="1075"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="x7v-T9-1bV">
             <objects>
-                <viewController id="zlQ-Dj-yhv" sceneMemberID="viewController">
+                <viewController id="zlQ-Dj-yhv" customClass="SettingsViewController" customModule="Flag_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hAE-Cd-J8S"/>
                         <viewControllerLayoutGuide type="bottom" id="hXo-XP-nWg"/>
