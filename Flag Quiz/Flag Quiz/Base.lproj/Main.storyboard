@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Flag Quiz-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Flag_Quiz" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="GyL-cF-146"/>
+                    <navigationItem key="navigationItem" title="Flag Quiz" id="GyL-cF-146">
+                        <barButtonItem key="rightBarButtonItem" title="Setting" id="YKR-CM-IBH">
+                            <connections>
+                                <segue destination="zlQ-Dj-yhv" kind="show" id="NtT-n4-f6h"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,6 +47,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxD-hz-hzG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="195" y="1075"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="x7v-T9-1bV">
+            <objects>
+                <viewController id="zlQ-Dj-yhv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hAE-Cd-J8S"/>
+                        <viewControllerLayoutGuide type="bottom" id="hXo-XP-nWg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PNy-ck-PBh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EJ0-JV-cU9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
 </document>
