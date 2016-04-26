@@ -39,6 +39,17 @@ class Model {
     private var countriesInEnabledRegions: [String] = []
     
     
+    // returns Dictionary indicating the regions to include in the quiz
+    var regions: [String: Bool] {
+        return enabledRegions
+    }
+    
+    // returns Array of countries for only the enabled regions
+    var enabledRegionCountries: [String] {
+        return countriesInEnabledRegions
+    }
+    
+    
     
     // initialize the Settings from the app's NSUserDefaults
     init(delegate: ModelDelegate) {
@@ -80,9 +91,6 @@ class Model {
     }
     
     
-    
-    
-    
     // load countriesInEnabledRegions
     func regionsChanged() {
         
@@ -96,6 +104,33 @@ class Model {
             }
         }
         
+    }
+    
+    
+    
+    
+    // toggles a region on or off
+    func toggleRegion(name: String) {
+        enabledRegions[name] = !(enabledRegions[name]!)
+        NSUserDefaults.standardUserDefaults().setObject(enabledRegions as NSDictionary, forKey: regionsKey)
+        NSUserDefaults.standardUserDefaults().synchronize()
+        regionsChanged()
+        
+    }
+    
+    
+    // changes the number of guesses displayed with each flag
+    func setNumberOfGuesses(guesses: Int) {
+        numberOfGuesses = guesses
+        NSUserDefaults.standardUserDefaults().setInteger(numberOfGuesses, forKey: guessesKey)
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+    }
+    
+    
+    // called by SettingsViewController when settings change to have model notify QuizViewController of the changes
+    func notifyDelegate() {
+        delegate.settingChanged()
     }
     
     
