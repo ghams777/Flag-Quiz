@@ -135,4 +135,31 @@ class Model {
     
     
     
+    // return Array of flags to quiz based on enabled regions
+    func newQuizCountries() -> [String] {
+        
+        var quizCountries: [String] = []
+        var flagCounter = 0
+        
+        // add 10 random filenames to quizCountries
+        while flagCounter < numberOfQuestions {
+            
+            let randomIndex = Int(arc4random_uniform(UInt32(enabledRegionCountries.count)))
+            
+            let filename = enabledRegionCountries[randomIndex]
+            
+            // if image's filename is not in quizCountries, add it
+            if quizCountries.filter({$0 == filename}).count == 0 {
+                quizCountries.append(filename)
+                flagCounter += 1
+            }
+            
+        }
+        
+        return quizCountries
+        
+    }
+    
+    
+    
 }
