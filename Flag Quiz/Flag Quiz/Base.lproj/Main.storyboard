@@ -123,10 +123,10 @@
                         <outlet property="answerLabel" destination="bba-1z-mK3" id="iiJ-1P-Jqy"/>
                         <outlet property="flagImageView" destination="C2J-2V-Ik8" id="ceg-Yd-wcg"/>
                         <outlet property="questionNumberLabel" destination="v7v-XP-dRV" id="iYf-4j-2bd"/>
-                        <outletCollection property="segmentedControl" destination="C1o-Ih-m7v" collectionClass="NSMutableArray" id="Suj-Ge-Sbl"/>
-                        <outletCollection property="segmentedControl" destination="eRd-Lu-MSO" collectionClass="NSMutableArray" id="B5o-I2-Z8o"/>
-                        <outletCollection property="segmentedControl" destination="h44-D6-DNq" collectionClass="NSMutableArray" id="5Lw-Lo-wYO"/>
-                        <outletCollection property="segmentedControl" destination="kuE-AA-eDF" collectionClass="NSMutableArray" id="X4Y-K8-EsW"/>
+                        <outletCollection property="segmentedControls" destination="eRd-Lu-MSO" collectionClass="NSMutableArray" id="cpa-R5-IoU"/>
+                        <outletCollection property="segmentedControls" destination="C1o-Ih-m7v" id="Fqm-Hp-xDD"/>
+                        <outletCollection property="segmentedControls" destination="h44-D6-DNq" id="kNM-gi-8A9"/>
+                        <outletCollection property="segmentedControls" destination="kuE-AA-eDF" id="8ht-Rd-1ns"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
