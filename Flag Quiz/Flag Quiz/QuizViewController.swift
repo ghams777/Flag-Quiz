@@ -65,7 +65,7 @@ class QuizViewController: UIViewController, ModelDelegate {
     // display nex question
     func nextQuestion() {
         
-        questionNumberLabel.text = String(format: "Question %1$d of %2$d", (correctGuesses + 1), model.numberOfQuestions)
+        questionNumberLabel.text = String(format: "Question \(correctGuesses + 1) of \(model.numberOfQuestions)")
         answerLabel.text = ""
         correctAnswer = quizCountries.removeAtIndex(0)
         flagImageView.image = UIImage(named: correctAnswer) // next flag
@@ -117,7 +117,7 @@ class QuizViewController: UIViewController, ModelDelegate {
         var name = filename.componentsSeparatedByString("-")[1]
         let length: Int = name.characters.count
         name = (name as NSString).substringToIndex(length - 4)
-        let components = name.componentsSeparatedByString("-")
+        let components = name.componentsSeparatedByString("_")
         return components.joinWithSeparator(" ")
         
     }
@@ -210,7 +210,7 @@ class QuizViewController: UIViewController, ModelDelegate {
         let percentString = NSNumberFormatter.localizedStringFromNumber(Double(correctGuesses), numberStyle: .PercentStyle)
         
         // create UIAlertController for user input
-        let alertController = UIAlertController(title: "Quiz Result", message: String(format: "%1$i guesses, %2$i correct", totalGuesses, percentString), preferredStyle: .Alert)
+        let alertController = UIAlertController(title: "Quiz Result", message: String(format: "\(totalGuesses) guesses, \(percentString) correct"), preferredStyle: .Alert)
         
         let newQuizAction = UIAlertAction(title: "New Quiz", style: .Default) { (action) in
             self.resetQuiz()
