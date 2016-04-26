@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840A45221CCF184D00C400A5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A45211CCF184D00C400A5 /* Model.swift */; };
+		840A452B1CCF18BA00C400A5 /* Africa in Resources */ = {isa = PBXBuildFile; fileRef = 840A45251CCF18BA00C400A5 /* Africa */; };
+		840A452C1CCF18BA00C400A5 /* Asia in Resources */ = {isa = PBXBuildFile; fileRef = 840A45261CCF18BA00C400A5 /* Asia */; };
+		840A452D1CCF18BA00C400A5 /* Europe in Resources */ = {isa = PBXBuildFile; fileRef = 840A45271CCF18BA00C400A5 /* Europe */; };
+		840A452E1CCF18BA00C400A5 /* North_America in Resources */ = {isa = PBXBuildFile; fileRef = 840A45281CCF18BA00C400A5 /* North_America */; };
+		840A452F1CCF18BA00C400A5 /* Oceania in Resources */ = {isa = PBXBuildFile; fileRef = 840A45291CCF18BA00C400A5 /* Oceania */; };
+		840A45301CCF18BA00C400A5 /* South_America in Resources */ = {isa = PBXBuildFile; fileRef = 840A452A1CCF18BA00C400A5 /* South_America */; };
 		842317B21CCE2717009E17A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842317B11CCE2717009E17A7 /* AppDelegate.swift */; };
 		842317B41CCE2717009E17A7 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842317B31CCE2717009E17A7 /* QuizViewController.swift */; };
 		842317B71CCE2717009E17A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842317B51CCE2717009E17A7 /* Main.storyboard */; };
@@ -16,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		840A45211CCF184D00C400A5 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		840A45251CCF18BA00C400A5 /* Africa */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Africa; sourceTree = "<group>"; };
+		840A45261CCF18BA00C400A5 /* Asia */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Asia; sourceTree = "<group>"; };
+		840A45271CCF18BA00C400A5 /* Europe */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Europe; sourceTree = "<group>"; };
+		840A45281CCF18BA00C400A5 /* North_America */ = {isa = PBXFileReference; lastKnownFileType = folder; path = North_America; sourceTree = "<group>"; };
+		840A45291CCF18BA00C400A5 /* Oceania */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Oceania; sourceTree = "<group>"; };
+		840A452A1CCF18BA00C400A5 /* South_America */ = {isa = PBXFileReference; lastKnownFileType = folder; path = South_America; sourceTree = "<group>"; };
 		842317AE1CCE2717009E17A7 /* Flag Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flag Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		842317B11CCE2717009E17A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		842317B31CCE2717009E17A7 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +51,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		840A45231CCF185100C400A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				840A45211CCF184D00C400A5 /* Model.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		840A45241CCF187600C400A5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				840A45251CCF18BA00C400A5 /* Africa */,
+				840A45261CCF18BA00C400A5 /* Asia */,
+				840A45271CCF18BA00C400A5 /* Europe */,
+				840A45281CCF18BA00C400A5 /* North_America */,
+				840A45291CCF18BA00C400A5 /* Oceania */,
+				840A452A1CCF18BA00C400A5 /* South_America */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		842317A51CCE2717009E17A7 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +94,8 @@
 				842317B31CCE2717009E17A7 /* QuizViewController.swift */,
 				842317C41CCE2B1D009E17A7 /* SettingsViewController.swift */,
 				842317B51CCE2717009E17A7 /* Main.storyboard */,
+				840A45231CCF185100C400A5 /* Model */,
+				840A45241CCF187600C400A5 /* Images */,
 				842317C31CCE27BC009E17A7 /* Supporting Files */,
 			);
 			path = "Flag Quiz";
@@ -133,9 +170,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840A452B1CCF18BA00C400A5 /* Africa in Resources */,
 				842317BC1CCE2717009E17A7 /* LaunchScreen.storyboard in Resources */,
+				840A452D1CCF18BA00C400A5 /* Europe in Resources */,
 				842317B91CCE2717009E17A7 /* Assets.xcassets in Resources */,
+				840A45301CCF18BA00C400A5 /* South_America in Resources */,
 				842317B71CCE2717009E17A7 /* Main.storyboard in Resources */,
+				840A452C1CCF18BA00C400A5 /* Asia in Resources */,
+				840A452E1CCF18BA00C400A5 /* North_America in Resources */,
+				840A452F1CCF18BA00C400A5 /* Oceania in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +192,7 @@
 				842317B41CCE2717009E17A7 /* QuizViewController.swift in Sources */,
 				842317B21CCE2717009E17A7 /* AppDelegate.swift in Sources */,
 				842317C51CCE2B1D009E17A7 /* SettingsViewController.swift in Sources */,
+				840A45221CCF184D00C400A5 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +344,7 @@
 				842317C21CCE2717009E17A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
