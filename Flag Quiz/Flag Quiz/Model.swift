@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+
+// adopted by delegate so it can be notified when settings change
+protocol ModelDelegate {
+    func settingChanged()
+}
