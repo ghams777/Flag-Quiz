@@ -24,18 +24,18 @@ class Model {
     private var delegate: ModelDelegate! = nil
     
     var numberOfGuesses = 4 // number of guesses to display
-    private var enabledRegions = [
-        "Africa": false,
-        "Asia": false,
-        "Europe": false,
-        "North_America": true,
-        "Oceania": false,
-        "South_America": false
+    private var enabledRegions = [ // regions to use in quiz
+        "Africa" : false,
+        "Asia" : false,
+        "Europe" : false,
+        "North_America" : true,
+        "Oceania" : false,
+        "South_America" : false
     ]
     
     // variables for maintaining quiz data
     let numberOfQuestions = 10
-    private var allCountries: [String] = []
+    private var allCountries: [String] = [] // list of all flag names
     private var countriesInEnabledRegions: [String] = []
     
     
@@ -72,20 +72,24 @@ class Model {
         // get a list of all the png files in the app's images group
         let paths = NSBundle.mainBundle().pathsForResourcesOfType("png", inDirectory: nil) as [String]
         
+        print(paths.count)
+        
         // get image filenames from paths
         for path in paths {
             
-            if let pathImage = NSURL(string: path) {
-                
-                if !((pathImage.lastPathComponent?.hasPrefix("AppIcon"))!) {
-                    
-                    allCountries.append(pathImage.lastPathComponent!)
-                    
-                }
+            print("PATH " + path + "\n")
+            let pathImage = NSURL(fileURLWithPath: path)
+            print("PATH IMAGE" + String(pathImage.lastPathComponent))
             
+            
+            
+            if ((pathImage.lastPathComponent?.hasPrefix("AppIcon")) != nil) {
+                allCountries.append(pathImage.lastPathComponent!)
+                
             }
+            
         }
-        
+        print(allCountries.count)
         regionsChanged() // populate contriesInEnabledRegions
         
     }

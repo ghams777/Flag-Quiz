@@ -25,7 +25,7 @@ class QuizViewController: UIViewController, ModelDelegate {
     private var quizCountries: [String]! = nil // countries in quiz
     private var enabledCountries: [String]! = nil // countries for guesses
     
-    private var correntAnswer: String! = nil
+    private var correctAnswer: String! = nil
     private var correctGuesses = 0
     private var totalGuesses = 0
     
@@ -67,8 +67,8 @@ class QuizViewController: UIViewController, ModelDelegate {
         
         questionNumberLabel.text = String(format: "Question %1$d of %2$d", (correctGuesses + 1), model.numberOfQuestions)
         answerLabel.text = ""
-        correntAnswer = quizCountries.removeAtIndex(0)
-        flagImageView.image = UIImage(named: correntAnswer) // next flag
+        correctAnswer = quizCountries.removeAtIndex(0)
+        flagImageView.image = UIImage(named: correctAnswer) // next flag
         
         // re-enable UISegmentedControls and delete prior segments
         for segmentedControl in segmentedControls {
@@ -79,10 +79,147 @@ class QuizViewController: UIViewController, ModelDelegate {
         // place guesses on displayed UISegmentedControls
         enabledCountries.shuffle()
         
+        var i = 0
+        
+        for segmentedControl in segmentedControls {
+            if !(segmentedControl.hidden) {
+                var segmentIndex = 0
+                
+                while segmentIndex < 2 { // 2 per UISegmentedControl
+                    if i < enabledCountries.count && correctAnswer != enabledCountries[i] {
+                        
+                        segmentedControl.insertSegmentWithTitle(countryFromFilename(enabledCountries[i]), atIndex: segmentIndex, animated: true)
+                        
+                        segmentIndex += 1
+                        
+                    }
+                    
+                    i += 1
+                
+                }
+            }
+        }
+        
+        // pick random segment and replace with correct
+        let randomRow = Int(arc4random_uniform(UInt32(
+            model.numberOfGuesses / 2)))
+        let randomIndexInRow = Int(arc4random_uniform(UInt32(2)))
+        segmentedControls[randomRow].removeSegmentAtIndex(randomIndexInRow, animated: true)
+        segmentedControls[randomRow].insertSegmentWithTitle(countryFromFilename(correctAnswer), atIndex: randomIndexInRow, animated: true)
+        
     }
     
     
+    
+    // converts image filename to displayable guess String
+    func countryFromFilename(filename: String) -> String {
+        
+        var name = filename.componentsSeparatedByString("-")[1]
+        let length: Int = name.characters.count
+        name = (name as NSString).substringToIndex(length - 4)
+        let components = name.componentsSeparatedByString("-")
+        return components.joinWithSeparator(" ")
+        
+    }
+    
+    
+    
+    // called when the user makes a guess
     @IBAction func submitGuess(sender: AnyObject) {
+        
+        // get the title of the bar at the segment, which is the guess
+        let guess = sender.titleForSegmentAtIndex(sender.selectedSegmentIndex)
+        let correct = countryFromFilename(correctAnswer)
+        totalGuesses += 1
+        
+        if guess != correct {
+            
+            // disable incorrect guess
+            sender.setEnabled(false, forSegmentAtIndex: sender.selectedSegmentIndex)
+            answerLabel.textColor = incorrectColor
+            answerLabel.text = "Incorrect"
+            answerLabel.alpha = 1.0
+            UIView.animateWithDuration(1.0, animations: {
+                self.answerLabel.alpha = 0.0
+            })
+            shakeFlag()
+            
+        } else { // correct guess
+            
+            answerLabel.textColor = correctColor
+            answerLabel.text = guess! + "!"
+            answerLabel.alpha = 1.0
+            correctGuesses += 1
+            
+            // disable segmentedControls
+            for segmentedControl in segmentedControls {
+                
+                segmentedControl.enabled = false
+                
+            }
+            
+            if correctGuesses == model.numberOfQuestions { // quiz over
+                displayQuizResult()
+                
+            } else { // use GCD to load next flag after 2 seconds
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), {
+                    self.nextQuestion()
+                })
+                
+            }
+            
+        }
+        
+        
+    }
+    
+    
+    
+    
+    
+    // shakes the flag to visually indicate incorrect response
+    func shakeFlag() {
+        
+        UIView.animateWithDuration(0.1) { 
+            self.flagImageView.frame.origin.x += 16
+        }
+        
+        UIView.animateWithDuration(0.1, delay: 0.1, options: .TransitionNone, animations: {
+            self.flagImageView.frame.origin.x -= 32
+            }, completion: nil)
+        
+        UIView.animateWithDuration(0.1, delay: 0.2, options: .TransitionNone, animations: {
+            self.flagImageView.frame.origin.x += 32
+            }, completion: nil)
+        
+        UIView.animateWithDuration(0.1, delay: 0.3, options: .TransitionNone, animations: {
+            self.flagImageView.frame.origin.x -= 32
+            }, completion: nil)
+        
+        UIView.animateWithDuration(0.1, delay: 0.4, options: .TransitionNone, animations: {
+            self.flagImageView.frame.origin.x += 16
+            }, completion: nil)
+        
+    }
+    
+    
+    
+    // display quiz result
+    func displayQuizResult() {
+        
+        let percentString = NSNumberFormatter.localizedStringFromNumber(Double(correctGuesses), numberStyle: .PercentStyle)
+        
+        // create UIAlertController for user input
+        let alertController = UIAlertController(title: "Quiz Result", message: String(format: "%1$i guesses, %2$i correct", totalGuesses, percentString), preferredStyle: .Alert)
+        
+        let newQuizAction = UIAlertAction(title: "New Quiz", style: .Default) { (action) in
+            self.resetQuiz()
+        }
+        
+        alertController.addAction(newQuizAction)
+        
+        presentViewController(alertController, animated: true, completion: nil)
+        
     }
     
 
@@ -96,11 +233,13 @@ extension Array {
     mutating func shuffle() {
         
         // Modern Fisher-Yates shuffle: http://bit.ly/FisherYates
-        for first in (self.count-1).stride(through: 1, by: -1) {
-            
-            let second = Int(arc4random_uniform(UInt32(first + 1)))
-            swap(&self[first], &self[second])
-            
+        // empty and single-element collections don't shuffle
+        if count < 2 { return }
+        
+        for i in 0..<count - 1 {
+            let j = Int(arc4random_uniform(UInt32(count - i))) + i
+            guard i != j else { continue }
+            swap(&self[i], &self[j])
         }
         
     }
