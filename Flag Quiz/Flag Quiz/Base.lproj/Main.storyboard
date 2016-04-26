@@ -236,6 +236,9 @@
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JJB-DI-Hyw">
                                                 <rect key="frame" x="0.0" y="205" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="switchesChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="JDY-Xo-1vW"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -265,6 +268,10 @@
                             <constraint firstItem="2N1-jh-JYR" firstAttribute="centerX" secondItem="hi4-PF-BWd" secondAttribute="centerX" id="ncX-wU-cuu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="guessesSegmentedControl" destination="2N1-jh-JYR" id="Gn2-Yo-hbf"/>
+                        <outletCollection property="switches" destination="ezj-bn-RJu" collectionClass="NSMutableArray" id="J1p-xp-wFu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJ0-JV-cU9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

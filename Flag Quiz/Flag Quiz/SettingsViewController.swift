@@ -9,5 +9,12 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    
+    @IBOutlet var switches: [UISwitch]!
 
+    @IBOutlet weak var guessesSegmentedControl: UISegmentedControl!
+    
+    
+    @IBAction func switchesChanged(sender: AnyObject) {
+    }
 }
