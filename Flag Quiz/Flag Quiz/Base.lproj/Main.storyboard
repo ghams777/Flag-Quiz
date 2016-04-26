@@ -27,85 +27,88 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C2J-2V-Ik8">
-                                <rect key="frame" x="180" y="116" width="240" height="219"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="hbS-E9-nRW"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 1 of 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="v7v-XP-dRV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Question 1 of 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="v7v-XP-dRV">
                                 <rect key="frame" x="178" y="343" width="245" height="44"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="32"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="C1o-Ih-m7v">
-                                <rect key="frame" x="240" y="395" width="121" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="C1o-Ih-m7v">
+                                <rect key="frame" x="100" y="395" width="400" height="29"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="Nicaragua"/>
+                                    <segment title="Puerto Rico"/>
                                 </segments>
                                 <connections>
-                                    <action selector="submitGuess:" destination="BYZ-38-t0r" eventType="valueChanged" id="9sG-Sp-9AF"/>
+                                    <action selector="submitGuess:" destination="BYZ-38-t0r" eventType="valueChanged" id="GPY-Gl-ZIT"/>
                                 </connections>
                             </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eRd-Lu-MSO">
-                                <rect key="frame" x="240" y="431" width="121" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="eRd-Lu-MSO">
+                                <rect key="frame" x="100" y="431" width="400" height="29"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="US Virgin Islands"/>
+                                    <segment title="Saint Lucia"/>
                                 </segments>
                                 <connections>
-                                    <action selector="submit:" destination="BYZ-38-t0r" eventType="valueChanged" id="Pdu-Fa-fUp"/>
+                                    <action selector="submitGuess:" destination="BYZ-38-t0r" eventType="valueChanged" id="8OP-hs-qRN"/>
                                 </connections>
                             </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="h44-D6-DNq">
-                                <rect key="frame" x="240" y="467" width="121" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="h44-D6-DNq">
+                                <rect key="frame" x="100" y="467" width="400" height="29"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="St. Vicent and Grenadines"/>
+                                    <segment title="Mexico"/>
                                 </segments>
                                 <connections>
-                                    <action selector="submitGuess:" destination="BYZ-38-t0r" eventType="valueChanged" id="BfE-OA-wpE"/>
+                                    <action selector="submitGuess:" destination="BYZ-38-t0r" eventType="valueChanged" id="jUb-KY-LUo"/>
                                 </connections>
                             </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kuE-AA-eDF">
-                                <rect key="frame" x="240" y="503" width="121" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="kuE-AA-eDF">
+                                <rect key="frame" x="100" y="503" width="400" height="29"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="Guatemala"/>
+                                    <segment title="Saint Pierre"/>
                                 </segments>
+                                <connections>
+                                    <action selector="submitGuess:" destination="BYZ-38-t0r" eventType="valueChanged" id="zYG-gl-UrD"/>
+                                </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bba-1z-mK3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Correct!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bba-1z-mK3">
                                 <rect key="frame" x="178" y="539" width="245" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Ps6-09-wXN"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="42"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C2J-2V-Ik8">
+                                <rect key="frame" x="100" y="115" width="400" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="aFP-WO-UNp"/>
+                                    <constraint firstAttribute="height" constant="220" id="e7e-Va-7HB"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="v7v-XP-dRV" firstAttribute="centerX" secondItem="C1o-Ih-m7v" secondAttribute="centerX" id="08k-A6-4Jh"/>
+                            <constraint firstItem="eRd-Lu-MSO" firstAttribute="leading" secondItem="h44-D6-DNq" secondAttribute="leading" id="1f6-8R-V5X"/>
                             <constraint firstItem="xNW-Dj-74M" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="8VU-hc-sDq"/>
-                            <constraint firstItem="h44-D6-DNq" firstAttribute="top" secondItem="eRd-Lu-MSO" secondAttribute="bottom" constant="8" id="Kh2-6r-imJ"/>
-                            <constraint firstItem="v7v-XP-dRV" firstAttribute="trailing" secondItem="bba-1z-mK3" secondAttribute="trailing" id="Kju-8p-5mp"/>
-                            <constraint firstItem="h44-D6-DNq" firstAttribute="leading" secondItem="kuE-AA-eDF" secondAttribute="leading" id="NPc-lV-TeW"/>
+                            <constraint firstItem="C1o-Ih-m7v" firstAttribute="trailing" secondItem="C2J-2V-Ik8" secondAttribute="trailing" id="JDu-5e-6ee"/>
                             <constraint firstItem="xNW-Dj-74M" firstAttribute="centerX" secondItem="C2J-2V-Ik8" secondAttribute="centerX" id="PTo-7F-bkH"/>
-                            <constraint firstItem="C1o-Ih-m7v" firstAttribute="leading" secondItem="eRd-Lu-MSO" secondAttribute="leading" id="ROf-NK-DGu"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bba-1z-mK3" secondAttribute="bottom" constant="11" id="VZS-1e-4oF"/>
-                            <constraint firstItem="eRd-Lu-MSO" firstAttribute="leading" secondItem="h44-D6-DNq" secondAttribute="leading" id="b09-kE-6TP"/>
-                            <constraint firstItem="C1o-Ih-m7v" firstAttribute="top" secondItem="v7v-XP-dRV" secondAttribute="bottom" constant="8" id="gsx-CQ-upJ"/>
-                            <constraint firstItem="bba-1z-mK3" firstAttribute="top" secondItem="kuE-AA-eDF" secondAttribute="bottom" constant="8" id="mmP-wG-jn9"/>
-                            <constraint firstItem="kuE-AA-eDF" firstAttribute="top" secondItem="h44-D6-DNq" secondAttribute="bottom" constant="8" id="n8F-ex-vgp"/>
+                            <constraint firstItem="bba-1z-mK3" firstAttribute="top" secondItem="kuE-AA-eDF" secondAttribute="bottom" constant="8" id="WoH-iL-esI"/>
+                            <constraint firstItem="bba-1z-mK3" firstAttribute="centerX" secondItem="kuE-AA-eDF" secondAttribute="centerX" id="eG7-I9-6zT"/>
+                            <constraint firstItem="eRd-Lu-MSO" firstAttribute="top" secondItem="C1o-Ih-m7v" secondAttribute="bottom" constant="8" symbolic="YES" id="ehF-Nk-QuD"/>
+                            <constraint firstItem="C1o-Ih-m7v" firstAttribute="leading" secondItem="eRd-Lu-MSO" secondAttribute="leading" id="ehk-Da-ErY"/>
+                            <constraint firstItem="C1o-Ih-m7v" firstAttribute="top" secondItem="v7v-XP-dRV" secondAttribute="bottom" constant="8" symbolic="YES" id="g8L-T7-sg4"/>
+                            <constraint firstItem="C1o-Ih-m7v" firstAttribute="leading" secondItem="C2J-2V-Ik8" secondAttribute="leading" id="mEj-eQ-zGB"/>
+                            <constraint firstItem="h44-D6-DNq" firstAttribute="top" secondItem="eRd-Lu-MSO" secondAttribute="bottom" constant="8" symbolic="YES" id="mnV-4E-T19"/>
                             <constraint firstItem="v7v-XP-dRV" firstAttribute="top" secondItem="C2J-2V-Ik8" secondAttribute="bottom" constant="8" symbolic="YES" id="nms-u2-1Bd"/>
                             <constraint firstItem="xNW-Dj-74M" firstAttribute="trailing" secondItem="v7v-XP-dRV" secondAttribute="trailing" id="p9f-O9-9hJ"/>
+                            <constraint firstItem="C1o-Ih-m7v" firstAttribute="trailing" secondItem="eRd-Lu-MSO" secondAttribute="trailing" id="rIh-Vl-50E"/>
+                            <constraint firstItem="kuE-AA-eDF" firstAttribute="top" secondItem="h44-D6-DNq" secondAttribute="bottom" constant="8" symbolic="YES" id="sAR-ie-pLg"/>
                             <constraint firstItem="C2J-2V-Ik8" firstAttribute="top" secondItem="xNW-Dj-74M" secondAttribute="bottom" constant="8" symbolic="YES" id="sWB-7F-cCe"/>
                             <constraint firstItem="xNW-Dj-74M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tfc-lY-Zuj"/>
-                            <constraint firstItem="v7v-XP-dRV" firstAttribute="leading" secondItem="bba-1z-mK3" secondAttribute="leading" id="ujU-Tw-mlW"/>
-                            <constraint firstItem="eRd-Lu-MSO" firstAttribute="top" secondItem="C1o-Ih-m7v" secondAttribute="bottom" constant="8" id="w3p-yd-eaS"/>
+                            <constraint firstItem="h44-D6-DNq" firstAttribute="trailing" secondItem="kuE-AA-eDF" secondAttribute="trailing" id="vPQ-dM-mlr"/>
+                            <constraint firstItem="h44-D6-DNq" firstAttribute="leading" secondItem="kuE-AA-eDF" secondAttribute="leading" id="xEI-WJ-e2e"/>
+                            <constraint firstItem="eRd-Lu-MSO" firstAttribute="trailing" secondItem="h44-D6-DNq" secondAttribute="trailing" id="yFZ-Z3-sZI"/>
                             <constraint firstItem="xNW-Dj-74M" firstAttribute="leading" secondItem="v7v-XP-dRV" secondAttribute="leading" id="zSr-3o-bAa"/>
                         </constraints>
                     </view>
@@ -221,18 +224,33 @@
                                         <subviews>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r2t-L4-0KJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="switchesChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="Fqc-RY-WOJ"/>
+                                                </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ezj-bn-RJu">
                                                 <rect key="frame" x="0.0" y="41" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="switchesChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="eU8-qY-hjV"/>
+                                                </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tug-Kx-Mrh">
                                                 <rect key="frame" x="0.0" y="82" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="switchesChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="QV9-sr-Toa"/>
+                                                </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qrg-uh-Pcj">
                                                 <rect key="frame" x="0.0" y="123" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="switchesChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="Pbj-zd-DRk"/>
+                                                </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QXB-Xb-f8K">
                                                 <rect key="frame" x="0.0" y="164" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="switchesChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="aDG-oj-N3e"/>
+                                                </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JJB-DI-Hyw">
                                                 <rect key="frame" x="0.0" y="205" width="51" height="31"/>
@@ -271,6 +289,11 @@
                     <connections>
                         <outlet property="guessesSegmentedControl" destination="2N1-jh-JYR" id="Gn2-Yo-hbf"/>
                         <outletCollection property="switches" destination="ezj-bn-RJu" collectionClass="NSMutableArray" id="J1p-xp-wFu"/>
+                        <outletCollection property="switches" destination="r2t-L4-0KJ" collectionClass="NSMutableArray" id="Ekv-Ey-Sge"/>
+                        <outletCollection property="switches" destination="tug-Kx-Mrh" collectionClass="NSMutableArray" id="Qnc-Y2-paN"/>
+                        <outletCollection property="switches" destination="qrg-uh-Pcj" collectionClass="NSMutableArray" id="4sg-hv-Pmd"/>
+                        <outletCollection property="switches" destination="QXB-Xb-f8K" collectionClass="NSMutableArray" id="Pug-qF-fe5"/>
+                        <outletCollection property="switches" destination="JJB-DI-Hyw" collectionClass="NSMutableArray" id="Wv3-0c-pC4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJ0-JV-cU9" userLabel="First Responder" sceneMemberID="firstResponder"/>
