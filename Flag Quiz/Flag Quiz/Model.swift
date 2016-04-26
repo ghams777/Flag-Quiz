@@ -39,4 +39,65 @@ class Model {
     private var countriesInEnabledRegions: [String] = []
     
     
+    
+    // initialize the Settings from the app's NSUserDefaults
+    init(delegate: ModelDelegate) {
+        self.delegate = delegate
+        
+        // get the NSUserDefaults object for the app
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        
+        // get number of guesses
+        let tempGuesses = userDefaults.integerForKey(guessesKey)
+        if tempGuesses != 0 {
+            numberOfGuesses = tempGuesses
+        }
+        
+        // get Dictionary containing the region settings
+        if let tempRegions = userDefaults.dictionaryForKey(regionsKey) {
+            self.enabledRegions = tempRegions as! [String: Bool]
+        }
+        
+        // get a list of all the png files in the app's images group
+        let paths = NSBundle.mainBundle().pathsForResourcesOfType("png", inDirectory: nil) as [String]
+        
+        // get image filenames from paths
+        for path in paths {
+            
+            if let pathImage = NSURL(string: path) {
+                
+                if !((pathImage.lastPathComponent?.hasPrefix("AppIcon"))!) {
+                    
+                    allCountries.append(pathImage.lastPathComponent!)
+                    
+                }
+            
+            }
+        }
+        
+        regionsChanged() // populate contriesInEnabledRegions
+        
+    }
+    
+    
+    
+    
+    
+    // load countriesInEnabledRegions
+    func regionsChanged() {
+        
+        countriesInEnabledRegions.removeAll()
+        
+        for filename in allCountries {
+            let region = filename.componentsSeparatedByString("-")[0]
+            
+            if !(enabledRegions[region]!) {
+                countriesInEnabledRegions.append(filename)
+            }
+        }
+        
+    }
+    
+    
+    
 }
