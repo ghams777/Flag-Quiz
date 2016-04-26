@@ -62,9 +62,48 @@ class QuizViewController: UIViewController, ModelDelegate {
     }
     
     
+    // display nex question
+    func nextQuestion() {
+        
+        questionNumberLabel.text = String(format: "Question %1$d of %2$d", (correctGuesses + 1), model.numberOfQuestions)
+        answerLabel.text = ""
+        correntAnswer = quizCountries.removeAtIndex(0)
+        flagImageView.image = UIImage(named: correntAnswer) // next flag
+        
+        // re-enable UISegmentedControls and delete prior segments
+        for segmentedControl in segmentedControls {
+            segmentedControl.enabled = true
+            segmentedControl.removeAllSegments()
+        }
+        
+        // place guesses on displayed UISegmentedControls
+        enabledCountries.shuffle()
+        
+    }
+    
+    
     @IBAction func submitGuess(sender: AnyObject) {
     }
     
 
+}
+
+
+
+// Array extension method for shuffling elements
+extension Array {
+    
+    mutating func shuffle() {
+        
+        // Modern Fisher-Yates shuffle: http://bit.ly/FisherYates
+        for first in (self.count-1).stride(through: 1, by: -1) {
+            
+            let second = Int(arc4random_uniform(UInt32(first + 1)))
+            swap(&self[first], &self[second])
+            
+        }
+        
+    }
+    
 }
 
