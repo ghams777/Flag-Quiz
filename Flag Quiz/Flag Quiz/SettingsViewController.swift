@@ -34,8 +34,56 @@ class SettingsViewController: UIViewController {
             switches[i].on = model.regions[regionNames[i]]!
         }
     }
+
     
     
-    @IBAction func switchesChanged(sender: AnyObject) {
+    // update guesses based on selected segment's index
+    @IBAction func numberOfGuessesChanged(sender: UISegmentedControl) {
+        
+        model.setNumberOfGuesses(2 + sender.selectedSegmentIndex * 2)
+        settingsChanged = true
+        
     }
+    
+   // toggle region corresponding to toggled UISwitch
+    @IBAction func switchChanged(sender: UISwitch) {
+        
+        for i in 0 ..< switches.count {
+            
+            if sender === switches[i] {
+                model.toggleRegion(regionNames[i])
+                settingsChanged = true
+            }
+            
+        }
+        
+        
+        // if no switches on, default to North America and display error
+        if model.regions.filter({$1 == true }).count == 0 {
+            
+            model.toggleRegion(regionNames[defaultRegionIndex])
+            switches[defaultRegionIndex].on = true
+            displayErrorDialog()
+            
+        }
+    }
+    
+    
+    // display message that at least on region must be selected
+    func displayErrorDialog() {
+        
+        // create UIAlertController for user input
+        let alertController = UIAlertController(title: "At Least One Region Required", message: String(format: "Selecting %@ as the default region.", regionNames[defaultRegionIndex]), preferredStyle: .Alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .Cancel, handler: nil)
+        
+        alertController.addAction(okAction)
+        
+        presentViewController(alertController, animated: true, completion: nil)
+        
+    }
+    
+    
+    
+    
 }

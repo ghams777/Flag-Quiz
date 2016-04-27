@@ -225,36 +225,39 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r2t-L4-0KJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="switchesChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="Fqc-RY-WOJ"/>
+                                                    <action selector="switchChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="Bxr-jP-PYD"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ezj-bn-RJu">
                                                 <rect key="frame" x="0.0" y="41" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="switchesChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="eU8-qY-hjV"/>
+                                                    <action selector="switchChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="lxW-an-Xg0"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tug-Kx-Mrh">
                                                 <rect key="frame" x="0.0" y="82" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="switchesChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="QV9-sr-Toa"/>
+                                                    <action selector="switchChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="b13-Z5-s8g"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qrg-uh-Pcj">
                                                 <rect key="frame" x="0.0" y="123" width="51" height="31"/>
                                                 <connections>
+                                                    <action selector="switchChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="05P-Eg-f9r"/>
                                                     <action selector="switchesChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="Pbj-zd-DRk"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QXB-Xb-f8K">
                                                 <rect key="frame" x="0.0" y="164" width="51" height="31"/>
                                                 <connections>
+                                                    <action selector="switchChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="pL2-vu-dHs"/>
                                                     <action selector="switchesChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="aDG-oj-N3e"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JJB-DI-Hyw">
                                                 <rect key="frame" x="0.0" y="205" width="51" height="31"/>
                                                 <connections>
+                                                    <action selector="switchChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="iNg-Wb-uFO"/>
                                                     <action selector="switchesChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="JDY-Xo-1vW"/>
                                                 </connections>
                                             </switch>
@@ -273,6 +276,9 @@
                                     <segment title="6" width="50"/>
                                     <segment title="8" width="50"/>
                                 </segments>
+                                <connections>
+                                    <action selector="numberOfGuessesChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="YK9-uf-lu4"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
