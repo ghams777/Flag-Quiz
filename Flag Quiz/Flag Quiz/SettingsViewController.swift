@@ -85,5 +85,18 @@ class SettingsViewController: UIViewController {
     
     
     
+    // called when user returns to quiz
+    override func viewWillDisappear(animated: Bool) {
+        
+        if settingsChanged {
+            
+            model.notifyDelegate() // called only if settings changed
+            
+        }
+        
+    }
+    
+    
+    
     
 }
