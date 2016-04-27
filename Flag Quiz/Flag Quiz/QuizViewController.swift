@@ -210,7 +210,8 @@ class QuizViewController: UIViewController, ModelDelegate {
         let percentString = NSNumberFormatter.localizedStringFromNumber(Double(correctGuesses), numberStyle: .PercentStyle)
         
         // create UIAlertController for user input
-        let alertController = UIAlertController(title: "Quiz Result", message: String(format: "\(totalGuesses) guesses, \(percentString) correct"), preferredStyle: .Alert)
+        let alertController = UIAlertController(title: "Quiz Result", message: String(format: "%1$i guesses, %2$@ correct",
+            totalGuesses, percentString), preferredStyle: .Alert)
         
         let newQuizAction = UIAlertAction(title: "New Quiz", style: .Default) { (action) in
             self.resetQuiz()
