@@ -44,7 +44,7 @@ class QuizViewController: UIViewController, ModelDelegate {
     func settingChanged() {
         enabledCountries = model.enabledRegionCountries
         resetQuiz()
-        print(enabledCountries)
+        // print(enabledCountries)
     }
     
     
