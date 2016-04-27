@@ -77,11 +77,9 @@ class Model {
         // get image filenames from paths
         for path in paths {
             
-            print("PATH " + path + "\n")
+            // print("PATH " + path + "\n")
             let pathImage = NSURL(fileURLWithPath: path)
-            print("PATH IMAGE" + String(pathImage.lastPathComponent))
-            
-            
+            // print("PATH IMAGE" + String(pathImage.lastPathComponent))
             
             if ((pathImage.lastPathComponent?.hasPrefix("AppIcon")) != nil) {
                 allCountries.append(pathImage.lastPathComponent!)
@@ -103,7 +101,7 @@ class Model {
         for filename in allCountries {
             let region = filename.componentsSeparatedByString("-")[0]
             
-            if !(enabledRegions[region]!) {
+            if enabledRegions[region]! {
                 countriesInEnabledRegions.append(filename)
             }
         }

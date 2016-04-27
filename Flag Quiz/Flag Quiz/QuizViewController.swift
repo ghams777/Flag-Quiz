@@ -44,6 +44,7 @@ class QuizViewController: UIViewController, ModelDelegate {
     func settingChanged() {
         enabledCountries = model.enabledRegionCountries
         resetQuiz()
+        print(enabledCountries)
     }
     
     
@@ -220,6 +221,19 @@ class QuizViewController: UIViewController, ModelDelegate {
         alertController.addAction(newQuizAction)
         
         presentViewController(alertController, animated: true, completion: nil)
+        
+    }
+    
+    
+    
+    // called before segue from QuizViewController to SettingsViewController
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "showSettings" {
+            let controller = segue.destinationViewController as! SettingsViewController
+            
+            controller.model = model
+        }
         
     }
     

@@ -115,7 +115,7 @@
                     <navigationItem key="navigationItem" title="Flag Quiz" id="GyL-cF-146">
                         <barButtonItem key="rightBarButtonItem" title="Setting" id="YKR-CM-IBH">
                             <connections>
-                                <segue destination="zlQ-Dj-yhv" kind="show" id="NtT-n4-f6h"/>
+                                <segue destination="zlQ-Dj-yhv" kind="show" identifier="showSettings" id="NtT-n4-f6h"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -176,43 +176,43 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NTh-7K-pPe">
-                                <rect key="frame" x="215" y="202" width="171" height="236"/>
+                                <rect key="frame" x="215" y="202" width="172" height="236"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="v1c-uQ-caq">
-                                        <rect key="frame" x="0.0" y="0.0" width="112" height="236"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="113" height="236"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Africa" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byl-sZ-zlM">
-                                                <rect key="frame" x="0.0" y="0.0" width="112" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="113" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Asia" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmf-j8-q2k">
-                                                <rect key="frame" x="0.0" y="51" width="112" height="21"/>
+                                                <rect key="frame" x="0.0" y="51" width="113" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Europe" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXc-bF-hK1">
-                                                <rect key="frame" x="0.0" y="92" width="112" height="21"/>
+                                                <rect key="frame" x="0.0" y="92" width="113" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="North America" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ua7-R8-1xI">
-                                                <rect key="frame" x="0.0" y="133" width="112" height="21"/>
+                                                <rect key="frame" x="0.0" y="133" width="113" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ocenia" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KiS-84-VGf">
-                                                <rect key="frame" x="0.0" y="174" width="112" height="21"/>
+                                                <rect key="frame" x="0.0" y="174" width="113" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="South Africa" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9N-Ff-knd">
-                                                <rect key="frame" x="0.0" y="215" width="112" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="South America" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9N-Ff-knd">
+                                                <rect key="frame" x="0.0" y="215" width="113" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -220,18 +220,18 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RNk-tT-avQ">
-                                        <rect key="frame" x="122" y="0.0" width="49" height="236"/>
+                                        <rect key="frame" x="123" y="0.0" width="49" height="236"/>
                                         <subviews>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r2t-L4-0KJ">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ezj-bn-RJu">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="switchChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="Bxr-jP-PYD"/>
+                                                    <action selector="switchChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="lxW-an-Xg0"/>
                                                 </connections>
                                             </switch>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ezj-bn-RJu">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r2t-L4-0KJ">
                                                 <rect key="frame" x="0.0" y="41" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="switchChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="lxW-an-Xg0"/>
+                                                    <action selector="switchChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="Bxr-jP-PYD"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tug-Kx-Mrh">
@@ -243,22 +243,19 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qrg-uh-Pcj">
                                                 <rect key="frame" x="0.0" y="123" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="switchChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="05P-Eg-f9r"/>
-                                                    <action selector="switchesChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="Pbj-zd-DRk"/>
+                                                    <action selector="switchChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="ZQQ-C3-iRo"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QXB-Xb-f8K">
                                                 <rect key="frame" x="0.0" y="164" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="switchChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="pL2-vu-dHs"/>
-                                                    <action selector="switchesChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="aDG-oj-N3e"/>
+                                                    <action selector="switchChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="GRZ-yy-ldR"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JJB-DI-Hyw">
                                                 <rect key="frame" x="0.0" y="205" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="switchChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="iNg-Wb-uFO"/>
-                                                    <action selector="switchesChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="JDY-Xo-1vW"/>
+                                                    <action selector="switchChanged:" destination="zlQ-Dj-yhv" eventType="valueChanged" id="jZw-Sr-Neu"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
